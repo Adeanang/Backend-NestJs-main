@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { book } from './entities/book-entity.js';
-import { createBookDto } from './dto/create-book-dto.js';
+import { CreateBookDto } from './dto/create-book-dto.js';
 
 @Injectable()
 export class BooksService {
@@ -21,7 +21,7 @@ export class BooksService {
   }
 
   // POST /books
-  create(createBookDto: createBookDto): book {
+  create(createBookDto: CreateBookDto): book {
     const newBook: book = {
       id: this.books.length + 1,
       title: createBookDto.title,
