@@ -1,7 +1,10 @@
-import { InterceptorsInterceptor } from './interceptors.interceptor.js';
 
-describe('InterceptorsInterceptor', () => {
+import { describe, it } from 'node:test';
+import assert from 'node:assert/strict';
+import { TrasformResponseInterceptor } from './interceptors.interceptor.js';
+
+describe('TrasformResponseInterceptor', () => {
   it('should be defined', () => {
-    expect(new InterceptorsInterceptor()).toBeDefined();
+    assert.ok(new TrasformResponseInterceptor());
   });
 });
